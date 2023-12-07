@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>DBMS Project</h1>
+    
+    <form method="POST">
+        <label for="registerNumber">Register Number:</label>
+        <input type="text" id="registerNumber" name="registerNumber"><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <!-- a dropdown menu to select the semester s1 to s8 -->
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester">
+            <option value="s1">S1</option>
+            <option value="s2">S2</option>
+            <option value="s3">S3</option>
+            <option value="s4">S4</option>
+            <option value="s5">S5</option>
+            <option value="s6">S6</option>
+            <option value="s7">S7</option>
+            <option value="s8">S8</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

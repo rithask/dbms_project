@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Personal Details</h1>
+    <div class="container">
+        <div class="details">
+            <div class="value">{{ data.personalDetails.fullName }}</div>
+        </div>
+        <div class="details">
+            <div class="value">{{ data.personalDetails.registerNo }}</div>
+        </div>
+        <div class="details">
+            <div class="value">{{ data.personalDetails.semesterName }}</div>
+        </div>
+        <div class="details">
+            <div class="value">{{ data.personalDetails.branchName }}</div>
+        </div>
+        <div class="details">
+            <div class="value">{{ data.personalDetails.institutionName }}</div>
+        </div>
+        <div class="details">
+            <div class="value">{{ data.personalDetails.resultName }}</div>
+        </div>
+    </div>
+    
+
+    <h1>Grades</h1>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+        {% for i in result %}
+        <tr>
+            <td>{{ i.courseName }}</td>
+            <td>{{ i.gradeObtained }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
